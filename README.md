@@ -27,6 +27,12 @@ This data analysis aims to provide insights into the sales performance of a fict
 merged_datfra2.isnull().sum()
 ```
 ```Python
+--- Calculate total Amount of Sales over Years 2015-2017---
+merged_datfra2['Total Sales'] = merged_datfra2['Gross Sales'] * (1 - merged_datfra2['Discount %'])
+
+merged_datfra2['Total Sales']
+```
+```Python
 --- Visualizing outliers using box plots---
 from scipy import stats
 z_scores = np.abs(stats.zscore(merged_datfra2.select_dtypes(include=np.number)))
