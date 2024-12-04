@@ -20,6 +20,13 @@ This data analysis aims to provide insights into the sales performance of a fict
    ######   Matplotlib/Seaborn: For exploratory visualizations during preprocessing.
 
 3. ####	Power BI - For Creating interactive visualizations that present business insights in a user-friendly format.
-  
+
 ---
 ### 
+  
+---
+### Data Visualization
+
+![Screenshot (11)](https://github.com/user-attachments/assets/ea0ae98d-9a6e-4253-b575-968e24f060f5)
+
+![Screenshot (13)](https://github.com/user-attachments/assets/1ed7c3c8-db1a-4bea-8890-bb83f4382f45)
