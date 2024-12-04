@@ -26,6 +26,38 @@ This data analysis aims to provide insights into the sales performance of a fict
 --- Handled missing values---
 merged_datfra2.isnull().sum()
 ```
+```Python
+--- Visualizing outliers using box plots---
+from scipy import stats
+z_scores = np.abs(stats.zscore(merged_datfra2.select_dtypes(include=np.number)))
+outliers = np.where(z_scores > 3)
+
+print("\nOutliers (based on Z-score > 3):")
+print(outliers)
+
+
+for column in merged_datfra2.select_dtypes(include=np.number).columns:
+    plt.figure(figsize=(6, 4))
+    sns.boxplot(merged_datfra2[column])
+    plt.title(f"Boxplot of {column}")
+    plt.show()
+```
+``` Python
+--- Identify patterns---
+print("Few rows of the dataset:")
+print(merged_datfra2.head())
+```
+```Python
+--- # Select only numeric columns for correlation
+num_df = merged_datfra2.select_dtypes(include=[float, int])
+
+# Now, calculate the correlation
+corr_matrix = num_df.corr()
+
+# Display the correlation matrix
+print(corr_matrix)
+```
+---
 ---
 ### KPI Overview
 The top section of the dashboard showcases critical KPIs for a high-level summary:
