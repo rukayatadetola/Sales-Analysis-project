@@ -20,10 +20,22 @@ This data analysis aims to provide insights into the sales performance of a fict
    ######   Matplotlib/Seaborn: For exploratory visualizations during preprocessing.
 
 3. ####	Power BI - For Creating interactive visualizations that present business insights in a user-friendly format.
-
 ---
-### 
-  
+### Analysis Breakdown
+```Python
+--- Handled missing values---
+merged_datfra2.isnull().sum()
+```
+---
+### KPI Overview
+The top section of the dashboard showcases critical KPIs for a high-level summary:
+
+   - Total Sales ($5.55M): Represents the total revenue generated.
+   - Profit Margin ($2.92M): Highlights net profit after deducting costs.
+   - Growth Rate ($2.47M): Displays growth trends compared to the previous period.
+   - Average Sales ($179.9): Calculates the mean sales per order.
+   - Order Count (31K): Tracks the total number of completed orders.
+
 ---
 ### Data Visualization
 
