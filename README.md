@@ -102,7 +102,6 @@ print("\nSummary statistics:")
 print(merged_datfra2.describe())
 ```
 ---
----
 ### KPI Overview
 The top section of the dashboard showcases critical KPIs for a high-level summary:
 
@@ -111,6 +110,20 @@ The top section of the dashboard showcases critical KPIs for a high-level summar
    - Growth Rate ($2.47M): Displays growth trends compared to the previous period.
    - Average Sales ($179.9): Calculates the mean sales per order.
    - Order Count (31K): Tracks the total number of completed orders.
+---
+### Insights
+   -	Total sales reached $5.55M, with a profit margin of $2.92M and a growth rate of $179.9, showing consistent growth.
+   -	Both sales and profits fluctuate slightly month-to-month but follow a similar upward trend, indicating stable demand.
+   -	Air shipments make up 54% of orders, suggesting a preference for fast delivery, possibly increasing shipping costs.
+   -	Profits are strongest in North America and Europe, highlighting these regions as key markets.
+   -	Fishing gear (especially cleats) leads sales, followed by Camping & Hiking and Women’s Apparel. Indoor/Outdoor Games and Water Sports show lower sales, indicating areas for              potential improvement.
+---
+### Recommendations
+   -	Since air shipment constitutes the largest portion, consider whether this is necessary for all products or if slower, cheaper options could be utilized for less time-sensitive items.
+   -  Focus marketing efforts in North America and Europe, where profit margins are high.
+   -	Continue to support high-performing categories (e.g., Fishing and Camping) with additional marketing, while exploring why certain categories like Indoor/Outdoor Games have lower         sales.
+   -	Keep an eye on monthly sales and profit trends. If certain months show consistent drops, investigate potential seasonal factors or market dynamics.
+
 
 ---
 ### Data Visualization
