@@ -1,7 +1,7 @@
-# Sales-Analysis
+# SALES ANALYSIS PROJECT
 
 ---
-## Sales Analysis Project
+## SALES ANALYSIS PROJECT REPORT
 
 ---
 ### Project Overview
@@ -19,21 +19,37 @@ This data analysis aims to provide insights into the sales performance of a fict
    ######   Pandas: For data manipulation and cleaning.
    ######   Matplotlib/Seaborn: For exploratory visualizations during preprocessing.
 
-3. ####	Power BI - For Creating interactive visualizations that present business insights in a user-friendly format.
+3. ####	Power BI:
+   1. For Creating interactive visualizations
+   2. For visuals that present business insights in a user-friendly format.
+   3. For creating dashboard. [View Here](https://ibb.co/6sxDjRL AND https://ibb.co/3Yb7jD1)
+      
 ---
 ### Analysis Breakdown
 ```Python
---- Handled missing values---
+--- HANDLED MISSING VALUES---
 merged_datfra2.isnull().sum()
 ```
 ```Python
---- Calculate total Amount of Sales over Years 2015-2017---
+--- MERGE THREE TABLES ---
+--- First Merge ---
+merged_datfra= pd.merge(df,dff, on='Product Name',how='inner')
+
+--- Rename a column Order YearMonth to Year Month ---
+dfff.rename(columns={'Order YearMonth': 'Year Month'}, inplace=True) 
+
+--- Second Merge ---
+merged_datfra2=pd.merge(merged_datfra, dfff, on=['Product Name','Year Month'], how='inner')
+
+```
+```Python
+--- CALCULATE TOTAL SALES OVER YEAR 2015 - 2017---
 merged_datfra2['Total Sales'] = merged_datfra2['Gross Sales'] * (1 - merged_datfra2['Discount %'])
 
 merged_datfra2['Total Sales']
 ```
 ```Python
---- Visualizing outliers using box plots---
+--- VISUALIZING OUTLIERS USING BOX PLOTS---
 from scipy import stats
 z_scores = np.abs(stats.zscore(merged_datfra2.select_dtypes(include=np.number)))
 outliers = np.where(z_scores > 3)
@@ -49,12 +65,12 @@ for column in merged_datfra2.select_dtypes(include=np.number).columns:
     plt.show()
 ```
 ``` Python
---- Identify patterns---
+--- IDENTIFY PATTERNS---
 print("Few rows of the dataset:")
 print(merged_datfra2.head())
 ```
 ```Python
---- # Select only numeric columns for correlation
+--- # SELECT ONLY NUMERIC COLUMNS FOR CORRELATION
 num_df = merged_datfra2.select_dtypes(include=[float, int])
 
 # Now, calculate the correlation
