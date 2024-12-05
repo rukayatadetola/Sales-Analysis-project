@@ -61,7 +61,10 @@ merged_datfra2['profit_margin']=(merged_datfra2['Profit']/merged_datfra2['Total 
 merged_datfra2['profit_margin'].fillna(0)
 ```
 ```Python
---- CHANG
+import datetime as dt
+
+merged_datfra2['Year Month'] = pd.to_datetime(merged_datfra2['Year Month'], format='%Y%m',errors='coerce')
+```
 ```Python
 --- VISUALIZING OUTLIERS USING BOX PLOTS---
 from scipy import stats
@@ -92,6 +95,11 @@ corr_matrix = num_df.corr()
 
 # Display the correlation matrix
 print(corr_matrix)
+```
+```Python
+---  Display Summary statistics
+print("\nSummary statistics:")
+print(merged_datfra2.describe())
 ```
 ---
 ---
