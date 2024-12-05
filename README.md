@@ -16,8 +16,8 @@ This data analysis aims to provide insights into the sales performance of a fict
    2.   Acts as the primary data source, enabling easy import into Python and Power BI.
 2. ####	Python - Used for data preprocessing, cleaning, and transformation.
    ##### Libraries Used:
-   ######   Pandas: For data manipulation and cleaning.
-   ######   Matplotlib/Seaborn: For exploratory visualizations during preprocessing.
+   1. Pandas: For data manipulation and cleaning.
+   2. Matplotlib/Seaborn: For exploratory visualizations during preprocessing.
 
 3. ####	Power BI:
    1. For Creating interactive visualizations
