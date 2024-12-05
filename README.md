@@ -43,10 +43,22 @@ merged_datfra2=pd.merge(merged_datfra, dfff, on=['Product Name','Year Month'], h
 
 ```
 ```Python
---- CALCULATE TOTAL SALES OVER YEAR 2015 - 2017---
+--- CALCULATE THE TOTAL SALES OVER YEAR 2015 - 2017---
 merged_datfra2['Total Sales'] = merged_datfra2['Gross Sales'] * (1 - merged_datfra2['Discount %'])
 
 merged_datfra2['Total Sales']
+```
+```Python
+--- CALCULATE THE SALES GROWTH RATE ---
+merged_datfra2['Sales Growth Rate']=merged_datfra2['Total Sales']-(merged_datfra2['Total Sales']-1)/(merged_datfra2['Total Sales']-1)*100
+
+merged_datfra2['Sales Growth Rate'].fillna(0)
+```
+``` Python
+---CALCULATE THE PROFIT MARGIN---
+merged_datfra2['profit_margin']=(merged_datfra2['Profit']/merged_datfra2['Total Sales']*100)
+
+merged_datfra2['profit_margin'].fillna(0)
 ```
 ```Python
 --- VISUALIZING OUTLIERS USING BOX PLOTS---
@@ -70,7 +82,7 @@ print("Few rows of the dataset:")
 print(merged_datfra2.head())
 ```
 ```Python
---- # SELECT ONLY NUMERIC COLUMNS FOR CORRELATION
+---  SELECT ONLY NUMERIC COLUMNS FOR CORRELATION ---
 num_df = merged_datfra2.select_dtypes(include=[float, int])
 
 # Now, calculate the correlation
