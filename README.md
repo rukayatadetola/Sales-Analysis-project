@@ -61,6 +61,8 @@ merged_datfra2['profit_margin']=(merged_datfra2['Profit']/merged_datfra2['Total 
 merged_datfra2['profit_margin'].fillna(0)
 ```
 ```Python
+--- CHANG
+```Python
 --- VISUALIZING OUTLIERS USING BOX PLOTS---
 from scipy import stats
 z_scores = np.abs(stats.zscore(merged_datfra2.select_dtypes(include=np.number)))
