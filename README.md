@@ -22,7 +22,7 @@ This data analysis aims to provide insights into the sales performance of a fict
 3. ####	Power BI:
    1. For Creating interactive visualizations
    2. For visuals that present business insights in a user-friendly format.
-   3. For creating dashboard. [View Here](https://ibb.co/6sxDjRL AND https://ibb.co/3Yb7jD1)
+   3. For creating dashboard. [View Here](https://ibb.co/6sxDjRL) AND (https://ibb.co/3Yb7jD1)
       
 ---
 ### Analysis Breakdown
